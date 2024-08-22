@@ -1,0 +1,148 @@
+/* This is Reponsive SCSS 
+for Header and Footer, which is
+ used throughout all of the pages. */
+@import 'colors.scss';
+@import 'fonts.scss';
+
+/* Mobile View */
+body {
+    background-color: $light-yellow;
+}
+
+// Navigation Bar
+.logo {
+    width: 100%;
+    padding: 1rem;
+}
+
+.navbar {
+    background-color: $light-sage;
+    padding: 0;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+// Navigation Menu
+.navbar-toggler {
+    padding: 0;
+    padding-right: 1rem;
+    border: none;
+    max-width: 20%;
+    float: right;
+
+    img {
+        width: 100%;
+    }
+}
+
+.nav-item {
+    text-align: center;
+    background-color: $sage;
+    border-bottom: 5px solid white;
+
+    a {
+        padding: 0.5rem;
+        color: white;
+        font-family: $main-font;
+        font-size: 2rem;
+    }
+}
+
+// Footer
+footer {
+    background-color: $light-sage;
+    text-align: center;
+    color: $footer-text;
+    padding: 1rem;
+    padding-bottom: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 4vw;
+    font-family: $main-font;
+    border: solid $light-sage;
+
+    .rightText {
+        display: none;
+    }
+}
+
+.instagram,
+.facebook,
+.twitter {
+    width: 10%;
+    margin: 2.5px;
+}
+
+// Tablet View
+@media (min-width: 768px) {
+
+    // Navigation
+    .navbar-toggler {
+        max-width: 15%;
+    }
+
+    .nav-item {
+        a {
+            font-size: 1.75rem;
+        }
+    }
+
+    // Footer
+    footer {
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+
+        .leftText {
+            text-align: left;
+        }
+
+        .rightText {
+            display: block;
+            text-align: right;
+            padding-top: 1rem;
+           position: sticky;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .instagram,
+    .facebook,
+    .twitter {
+        width: 6vw;
+    }
+}
+
+// Desktop View
+@media (min-width: 992px) {
+
+    // Navigation
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-item {
+        background-color: $light-sage;
+        border-bottom: none;
+        margin: 2rem;
+
+        a {
+            color: $dark-sage;
+            font-size: 25px;
+        }
+    }
+
+    // Footer
+    .instagram,
+    .facebook,
+    .twitter {
+        width: 4vw;
+        margin: 5px;
+    }
+}

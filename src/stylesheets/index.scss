@@ -1,0 +1,219 @@
+/* This is SCSS for the Home Page. */
+@import "main.scss";
+@import "colors.scss";
+@import "fonts.scss";
+
+.bg-image {
+  background-image: url("https://images.unsplash.com/photo-1621860310356-434c3cf4dbb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3086&q=80");
+  background-size: cover;
+  background-position: center;
+
+  .jumbotrontext {
+    margin: 2rem;
+  }
+
+  h1 {
+    margin-top: 8rem;
+    font-family: $heading-font;
+    font-size: 70px;
+    padding: 0;
+  }
+
+  h3 {
+    font-family: $main-font-italic;
+    padding: 0;
+  }
+
+  p {
+    font-family: $caption-font;
+    font-size: 18px;
+  }
+
+  button {
+    font-family: $button-font;
+    background-color: $green;
+    outline: 4px solid $dark-green;
+    color: white;
+    box-shadow: -6px 6px $dark-green;
+
+    &:focus,
+    &.focus {
+      background-color: $green;
+      outline: 2px solid $dark-green;
+    }
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
+
+.services {
+  h1 {
+    font-family: $main-font;
+    color: $green;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .threeservices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.25rem;
+    margin: 1.25rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .photocard {
+      position: relative;
+      text-align: center;
+      color: white;
+
+      h4 {
+        font-family: $button-font;
+        font-size: 6.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      p {
+        display: none;
+      }
+
+      .groupimage {
+        height: 100vw;
+        background: black;
+        position: relative;
+        text-align: center;
+        border-radius: 15px;
+      }
+      &:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+      &:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        img {
+          object-fit: cover;
+          opacity: 0.75;
+          border-radius: 15px;
+        }
+      }
+      &:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+}
+
+// Tablet View
+@media (min-width: 768px) {
+  .jumbotrontext {
+    h1,
+    h3,
+    p {
+      text-align: left;
+    }
+  }
+
+  .services {
+    #typesOfServices {
+      font-family: $main-font;
+      text-align: right;
+      margin-right: 1rem;
+      margin-bottom: 0rem;
+    }
+
+    .threeservices {
+      grid-template-columns: repeat(3, 1fr);
+      .photocard {
+        h4{
+            font-size: 5vw;
+        }
+        &:nth-child(1) {
+          grid-column: 1 / 2;
+          grid-row: 1;
+        }
+        &:nth-child(2) {
+          grid-column: 2 / 3;
+          grid-row: 1;
+        }
+        &:nth-child(3) {
+          grid-column: 3 / 4;
+          grid-row: 1;
+        }
+      }
+    }
+  }
+}
+
+// Desktop View
+@media (min-width: 992px) {
+  .jumbotrontext {
+    h1 {
+      font-size: 90px;
+    }
+    h3 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 27.5px;
+    }
+    button {
+      padding: 1rem;
+    }
+  }
+
+  .services{
+    h1{
+        font-size: 6.5vw;
+    }
+
+  .threeservices {
+    .photocard {
+      margin: 0rem 1.5rem 0rem 1.5rem;
+      padding: 1.25rem;
+      padding-bottom: 4rem;
+      margin-bottom: 8rem;
+      height: 500px;
+      background-color: white;
+      border-radius: 20px;
+      border: 5px solid $shadow;
+      box-shadow: -10px 12px $shadow;
+
+      .groupimage{
+        height: calc(500px - 6rem);
+        img{
+            height: calc(500px - 6rem);
+        }
+      }
+
+      .photocardtext{
+      h4{
+        font-size: 3vw;
+        color: $dark-teal;
+        top: 91%;
+      }
+
+      p {
+        display: block;
+        color: $dark-green;
+        margin-top: 5.5rem;
+        font-family: $caption-font;
+        font-size: 24px;
+      }
+      }
+    }
+  }
+  }
+}

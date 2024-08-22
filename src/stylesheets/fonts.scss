@@ -1,0 +1,53 @@
+// Typography
+$font-path: "../fonts";
+$dmserif-font-path: "../fonts/DM_Serif_Text";
+$zillaslab-font-path: "../fonts/Zilla_Slab";
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$dmserif-font-path}/DMSerifText-Regular.ttf") format("truetype");
+    font-family: "DM Serif Text Regular";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$dmserif-font-path}/DMSerifText-Italic.ttf") format("truetype");
+    font-family: "DM Serif Text Italic";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$font-path}/BerkshireSwash-Regular.ttf") format("truetype");
+    font-family: "Berkshire Swash";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$zillaslab-font-path}/ZillaSlab-Regular.ttf") format("truetype");
+    font-family: "Zilla Slab";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$zillaslab-font-path}/ZillaSlab-Bold.ttf") format("truetype");
+    font-family: "Zilla Slab Bold";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$zillaslab-font-path}/ZillaSlab-SemiBold.ttf") format("truetype");
+    font-family: "Zilla Slab Semibold";
+}
+
+@font-face{
+    src: url("../fonts/LilyScriptOne-Regular.ttf");
+    font-family: "Lily Script One";
+}
+
+$main-font: 'DM Serif Text Regular';
+$main-font-italic: 'DM Serif Text Italic';
+$heading-font: 'Berkshire Swash';
+$subheading-font: 'DM Serif Text Italic';
+$caption-font: 'Zilla Slab';
+$caption-font-bold: 'Zilla Slab Bold';
+$button-font: 'Zilla Slab Semibold';

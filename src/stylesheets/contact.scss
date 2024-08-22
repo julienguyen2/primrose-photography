@@ -1,0 +1,141 @@
+/* This is the SCSS for the Group Portrait Gallery page. */
+@import "main.scss";
+@import "colors.scss";
+@import "fonts.scss";
+
+.contacttext {
+  text-align: left;
+  margin: 1.5rem;
+
+  img {
+    display: none;
+  }
+
+  .form {
+    text-align: left;
+    font-family: $button-font;
+    font-size: 18px;
+    color: $dark-yellow;
+
+    input,
+    textarea {
+      color: $form-color;
+      background-color: $yellow;
+      outline: 4px solid $dark-yellow;
+      box-shadow: -6px 8px $dark-yellow;
+      border: none;
+      border-radius: 20px;
+      font-family: $caption-font;
+      font-size: 18px;
+    }
+
+    .form-control::placeholder {
+      color: $form-color;
+    }
+
+    button {
+      font-family: $button-font;
+      background-color: $sage;
+      outline: 4px solid $dark-sage;
+      color: white;
+      box-shadow: -8px 8px $dark-sage;
+      border-radius: 12px;
+      width: 100%;
+      margin: 1rem 0 0.25rem 0;
+
+      &:focus,
+      &.focus {
+        background-color: $green;
+        outline: 4px solid $dark-green;
+      }
+
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+
+  h1 {
+    font-family: $heading-font;
+    font-size: 40px;
+    color: $green;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-family: $main-font-italic;
+    font-size: 30px;
+    color: $dark-sage;
+    margin-bottom: 0;
+  }
+}
+
+// Tablet View
+@media (min-width: 768px) {
+  .contacttext {
+    h1 {
+      font-size: 60px;
+    }
+    h2 {
+      font-size: 40px;
+    }
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    .contactimage {
+      margin: 1rem 0rem 1rem 0rem;
+      img {
+        display: block;
+        border-radius: 20px;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+
+    .form {
+      .submit {
+        text-align: center;
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+// Desktop View
+@media (min-width: 992px) {
+  .contacttext
+  {
+    display: flex;
+    .contactimage{
+      margin: 0rem 0.5rem 0rem 0rem;
+      flex: 1;
+      h1{
+        text-align: left;
+        font-size: 5vw;
+        margin-bottom: 1rem;
+      }
+      img{
+        height: 600px;
+      }
+    }
+    .form{
+      flex: 1;
+      margin-left: 1rem;
+      margin-top: 4rem;
+      h2{
+        text-align: left;
+      }
+      .submit{
+        text-align: left;
+        button{
+          width: 20%;
+        }
+      }
+    }
+  }
+}
