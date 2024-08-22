@@ -5,7 +5,8 @@ Primrose Photography is a photography website I developed as my final project in
 Check out the live demo of [Primrose Photography](https://vocal-parfait-352ee0.netlify.app/).
 
 ## Tools & Technologies
-- Frontend: HTML, SCSS, Bootstrap
-- Backend: Node.js
-- Version Control: Git, GitHub
-- Programming Environment: Visual Studio Code
+- **Frontend**: HTML, SCSS, Bootstrap
+- **Backend**: Node.js
+- **Design**: Adobe XD
+- **Version Control**: Git, GitHub
+- **Programming Environment**: Visual Studio Code
